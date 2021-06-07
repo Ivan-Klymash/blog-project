@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+budy {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    background-color: #1d2126;
+    height: 81px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+
+.col-md-3 {
+    width: 25%;
+}
+.col-md-6 {
+    width: 50%;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo {
+margin-top: 32px;
+}
+
+.menu {
+    display: flex;
+    height: 81px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.menu li {
+    width: 14.28%;
+    margin-right: 35px;
+    cursor: pointer;
+}
+.menu a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #a4aead;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+.menu a:hover {
+    border: 2px solid #5a6068;
+    border-radius: 3px;
+}
+.menu li:first-child:hover {
+    border: none;
+}
+.menu li:first-child {
+    color: #23b7a3;
+    border: 2px solid #23b7a3;
+    border-radius: 4px;
+}
+
+.form-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.form-search input {
+    border: none;
+    /* забираємо білий колір фону у input */
+    background: transparent;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 42px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a4aead;
+    border: 2px solid #5a6068;
+    border-radius: 3px;
+    height: 30px;
+    margin-top: 26px;
+}
+.form-search input:focus {
+    outline: none;
+}
+
+.button-search {
+    width: 30px;
+    height: 30px;
+    background-image: url(images/serch.png);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: inherit;
+    position: absolute;
+    left: 195px;
+    top: 17px;
+}
+
+
+
+.slaider {
+    height: 660px;
+    width: 100%;
+    background-image: url(images/img\ \(2\).png);
+    background-repeat: no-repeat;
+}
+
+.col-md-7 {
+    width: 58.33%;
+}
+.title {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Quattrocento Sans', sans-serif;
+    text-transform: uppercase;
+    padding-top: 226px;
+}
+
+.text {
+    width: 653px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #abadb8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 36px;
+    padding-bottom: 45px;
+}
+
+.button {
+    width: 124px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 28px;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin-left: 11px;
+    background-color: inherit;
+}
+.button:hover {
+    background-color: #23b7a3;
+    border: none;
+}
