@@ -1,159 +1,855 @@
-* {
-    box-sizing: border-box;
-}
-
-budy {
-    font-family: 'Open Sans', sans-serif;
-}
-
 .header {
     background-color: #1d2126;
-    height: 81px;
-}
-
-.container {
-    width: 1170px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: flex;
-}
-
-.col-md-3 {
-    width: 25%;
-}
-.col-md-6 {
-    width: 50%;
-}
-
-[class*="col-"] {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 25px 0;
+    /* задаємо шапці позиціонування щоби вона скролилась разом із скролом сторінки */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .logo {
-margin-top: 32px;
+    margin-top: 6px;
+}
+
+.navigation {
+    margin-left: -15px;
 }
 
 .menu {
     display: flex;
-    height: 81px;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+    justify-content: flex-start;
+    overflow-x: auto;
 }
 .menu li {
-    width: 14.28%;
-    margin-right: 35px;
-    cursor: pointer;
+    /* є7 колонок під меню, 100/7=14.28571% */
+    width: 14.28571%;
+    margin-right: 15px;
+}
+.menu li:last-child {
+    margin-right: 85px;
 }
 .menu a {
+    /* щоб розмір <a> був як <li> задаємо dicplay:block  і задаємо висоту height */
     display: block;
-    text-decoration: none;
-    text-align: center;
-    color: #a4aead;
-    font-family: 'Open Sans', sans-serif;
+    height: 30px;
+    line-height: 26px;
     font-size: 14px;
-    line-height: 42px;
+    font-weight: 600;
+    text-decoration: none;
     text-transform: uppercase;
+    color: #a4aead;
+    cursor: pointer;
+    text-align: center;
+    /* принаведенні на блоки меню вони скачуть тому що додаємо рамку і змінюється висота/ширина. щоб не скакали задаємно рамку для menu aле з кольором transparent(колір унаслідується у батьківського елемента) і цю рамку ми не будемо бачити. пізніше при наведенні виводимо рамку з кольором яку будемо бачити але наше меню не скакатиме: */
+    border: 2px solid transparent;
+    border-radius: 2px;
 }
 .menu a:hover {
+    color: #a4aead;
+    background-color: inherit;
     border: 2px solid #5a6068;
-    border-radius: 3px;
-}
-.menu li:first-child:hover {
-    border: none;
-}
-.menu li:first-child {
-    color: #23b7a3;
-    border: 2px solid #23b7a3;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .form-search {
+    height: 30px;
+    border: 2px solid #3c4147;
+    border-radius: 2px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    width: 195px;
     position: relative;
 }
 .form-search input {
     border: none;
-    /* забираємо білий колір фону у input */
     background: transparent;
-    font-family: "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    line-height: 42px;
     font-weight: 600;
     text-transform: uppercase;
     color: #a4aead;
-    border: 2px solid #5a6068;
-    border-radius: 3px;
-    height: 30px;
-    margin-top: 26px;
+    /* щоб текст який користувач вводить не накладався на кнопку задаємо ширину вводу тексту до початку кнопки */
+    width: 152px;
 }
+ /* забираємо внутрішню рамку у input при фокусуванні(наведенні) через псевдоклас :focus */
 .form-search input:focus {
     outline: none;
 }
+/* стилізуємо placeholder */
+input::placeholder {
+   color: #a4aead;
+   font-size: 14px;
+   font-weight: 600;
+   text-indent: 8px;
+}
+input:placeholder-shown {
+    color: #23b7a3;
+}
 
 .button-search {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 12px;
     background-image: url(images/serch.png);
     background-repeat: no-repeat;
+    background-position: center;
     border: none;
     background-color: inherit;
     position: absolute;
-    left: 195px;
-    top: 17px;
+    right: 21px;
 }
-
 
 
 .slaider {
     height: 660px;
-    width: 100%;
     background-image: url(images/img\ \(2\).png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.col-md-7 {
-    width: 58.33%;
-}
 .title {
-    font-size: 36px;
-    line-height: 42px;
-    font-weight: 700;
-    color: white;
     font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    /* line-height: 42px; */
+    color: #ffffff;
     text-transform: uppercase;
-    padding-top: 226px;
+    padding-top: 225px;
 }
 
 .text {
-    width: 653px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #abadb8;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    padding-top: 36px;
-    padding-bottom: 45px;
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+line-height: 26px;
+color: #ccd0d7;
+font-weight: 400;
+padding: 33px 0px 45px;
 }
 
-.button {
+.slider-button {
     width: 124px;
     height: 44px;
+    font-family: 'Quattrocento Sans', sans-serif;
     font-size: 14px;
-    line-height: 28px;
-    color: white;
+    font-weight: 700;
+    line-height: 44px;
+    color: #ffffff;
     text-transform: uppercase;
-    border: 2px solid white;
-    border-radius: 4px;
-    margin-left: 11px;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
     background-color: inherit;
+    margin-right: 11px;
+    cursor: pointer;
 }
-.button:hover {
+.slider-button:hover {
     background-color: #23b7a3;
     border: none;
+}
+
+
+/* We are Modest */
+.about {
+    height: 611px;
+    background-color: white;
+}
+
+.modest {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #292f36;
+    text-transform: uppercase;
+    margin-top: 80px;
+    margin-bottom: 62px;
+    border-left: 10px solid #e1e6ea;
+    padding-left: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-about {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #8d8f92;
+    margin-top: -9px;
+}
+.text-about:first-child {
+    padding-bottom: 40px;
+}
+b {
+    font-weight: bold;
+}
+
+.modest-social-networks {
+    display: flex;
+    justify-content: space-between;
+    width: 304px;
+    padding-top: 55px;
+}
+.social-networks {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #c8cdd0;
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+.facebook {
+    background-image: url(images/icon\ \(facebook\).png);
+}
+.twitter {
+    background-image: url(images/icon\ \(twitter\).png);
+}
+.google {
+    background-image: url(images/icon\ \(google\).png);
+}
+.behance{
+    background-image: url(images/icon\ \(behance\).png);
+}
+.dribbble {
+    background-image: url(images/icon\ \(dribbble\).png);
+}
+
+.social-networks:hover {
+    background-color: #d0d5d9;
+    cursor: pointer;
+}
+
+
+.for-client{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modest-item {
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.square  {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #39a493;
+    color: #ffffff;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+}
+
+.modest-title {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #292f36;
+    text-transform: uppercase;
+    padding-left: 70px;
+    margin-top: -13px;
+}
+
+.modest-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #8d8f92;
+    text-transform: none;
+}
+
+/* Meet the team */
+.team {
+    height: 649px;
+    background-color: white;
+}
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+.members {
+    width: 263px;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+.Gloria-Bromley {
+    background-image: url(images/img\ \(Gloria-Bromley\).png);
+}
+.Paul-Torres {
+    background-image: url(images/img\ \(Paul-Torres\).png);
+}
+.Judith-Gillette {
+    background-image: url(images/img\ \(Judith-Gillette\).png);
+}
+.Delores-Reed {
+    background-image: url(images/img\ \(Delores-Reed\).png);
+}
+
+.member-description {
+    height: 74px;
+    width: 263px;
+    padding: 21px 20px;
+    background-color: #e1e6ea;
+}
+
+.member-title {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #292f36;
+    margin-bottom: 10px;
+}
+
+.member-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8d8f92;
+}
+
+.social-twitter {
+    background-image: url(images/icon\ \(twitter\).png);
+}
+.social-facebook {
+    background-image: url(images/icon\ \(facebook\).png);
+}
+.social-linkedin {
+    background-image: url(images/icon\ \(linkedin\).png);
+}
+
+.member-social {
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-color: #3a454d;
+    margin-right: 1px;
+    cursor: pointer;
+    display: none;
+}
+.member-sociald:last-child {
+    margin-right: 0px;
+}
+.member-social-network {
+    display: flex;
+    position: absolute;
+    top: 125px;
+    left: 59px;
+}
+
+
+.members:hover {
+    opacity: 0.4;
+}
+.team-members:hover .member-social {
+    display: block;
+}
+.team-members:hover .member-description {
+    background-color: #3a454d;
+}
+.team-members:hover .member-description p{
+    color: white;
+}
+
+
+/* Lowely work */
+
+.work {
+    height: 899px;
+    background-color:#3a454d;
+}
+
+.lovely-work {
+    color: #fff;
+    border-left: 10px solid #4e5a62;
+}
+
+.work-img {
+    display: flex;
+    align-items: flex-end;
+    width: 360px;
+    height: 265px;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.work-img-1 {
+    background-image: url(images/img\ \(work-img-1\).png);
+}
+.work-img-2 {
+    background-image: url(images/img\ \(work-img-2\).png);
+}
+.work-img-3 {
+    background-image: url(images/img\ \(work-img-3\).png);
+}
+.work-img-4 {
+    background-image: url(images/img\ \(work-img-4\).png);
+}
+.work-img-5 {
+    background-image: url(images/img\ \(work-img-5\).png);
+}
+.work-img-6 {
+    background-image: url(images/img\ \(work-img-6\).png);
+}
+
+.work-text {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    width: 360px;
+    height: 60px;
+    background-color: #292f36;
+    line-height: 60px;
+    padding-left: 21px;
+    display: none;
+}
+
+.work-img:hover .work-text {
+    display: block;
+}
+
+
+.button-add {
+    background-image: url(images/icon\ \(add\).png);
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-position: center;
+    border: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 175px;
+    bottom: 152px;
+    cursor: pointer;
+    display: none;
+}
+
+.work-img:hover >.button-add {
+    display: block;
+}
+
+.work-button {
+    margin-top: 30px;
+    width: 151px;
+    height: 44px;
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    background-color: inherit;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.work-button:hover {
+    background-color: #23b7a3;
+    /* border: none; */
+    border: 2px solid transparent;
+    border-radius: 2px;
+}
+
+/* What we do */
+
+.what-we-do {
+    height: 896px;
+}
+.we-do-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 76px;
+}
+
+.we-do-1-img {
+    background-image: url(images/icon\ \(setting\).png);
+}
+
+.we-do-title {
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #292f36;
+    text-align: center;
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+
+.we-do-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8d8f92;
+    text-align: center;
+    /* padding-left: 9px; */
+}
+
+.we-do-2-img {
+    background-image: url(images/icon\ \(14\).png);
+}
+.we-do-3-img {
+    background-image: url(images/icon\ \(phone\).png);
+
+}
+.we-do-4-img {
+    background-image: url(images/icon\ \(13\).png);
+}
+
+.we-do-1 {
+    margin-bottom: 96px;
+}
+
+/* Features */
+
+.features {
+    height: 732px;
+    background-color: #3a454d;
+}
+.features-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 240px;
+}
+.features-img-1 {
+    background-image: url(images/img\ \(15\).png);
+}
+
+.features-title {
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
+
+.features-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #dcdfe1;
+}
+
+.features-img-2 {
+    background-image: url(images/img\ \(14\).png);
+}
+.features-img-3 {
+    background-image: url(images/img\ \(13\).png);
+}
+
+/* Stay in touch */
+
+.touch {
+    height: 866px;
+}
+
+.contact-information-title {
+    padding: 60px 0px 40px 10px;
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #292f36;
+}
+
+.contact-information-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #8d8f92;
+}
+.contact-information-text p:first-child {
+    padding-bottom: 40px;
+}
+
+
+.form {
+    height: 400px;
+    width: 555px;
+    background-color: #fff;
+    margin-top: -129px;
+    position: absolute;
+}
+
+.form-field {
+    display: flex;
+}
+
+.left-text {
+    padding-left: 36px;
+}
+
+
+.left-text, .right-text {
+    padding-top: 30px;
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8d8f92;
+}
+
+.first-column, .second-column {
+    display: block;
+    width: 220px;
+    height: 44px;
+    border: none;
+    background-color: #eaeef1;
+    outline: none;
+}
+
+.first-column {
+    margin-left: -3px;
+    margin-right: 15px;
+}
+
+.form-message {
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8d8f92;
+    padding-left: 36px;
+    padding-top: 30px;
+}
+
+.form-message>textarea {
+    display: block;
+    resize: none;
+    border: none;
+    background-color: #eaeef1;
+    outline: none;
+    margin-left: -3px;
+    display: block;
+    width: 456px;
+}
+
+.form-button {
+    width: 151px;
+    height: 44px;
+    font-family: 'Quattrocento Sans',sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #23b7a3;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 30px 0px 0px 30px;
+}
+.form-button:hover {
+   color: #eaeef1;
+   border: 1px solid grey;
+}
+
+/* Footer */
+.footer {
+    background-color: #3a454d;
+    height: 95px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 95px;
+}
+
+.footer-social-networks ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-networks a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-top: 25px;
+}
+
+.footer-twitter {
+    background-image: url(images/icon\ \(9\).png);
+}
+.footer-facebook {
+    background-image: url(images/icon\ \(8\).png);
+}
+.footer-skype {
+    background-image: url(images/icon\ \(skype\).png);
+}
+.footer-behance {
+    background-image: url(images/icon\ \(16\).png);
+}
+.footer-linkedin {
+    background-image: url(images/icon\ \(linkedin\).png);
+}
+
+
+
+
+/* Гамбургер меню */
+@media (max-width:767px) {
+    /* пропишемо стилі для span щоб були 3 лінії  */
+    .nav-mobile-menu {
+        width: 15px;
+        height: 15px;
+        position: relative;
+    }
+    .nav-mobile-menu span {
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* пропишемо щоби із заповільненням мінялось гамбургер-меню. ease-in-out означає повільний вхід/вихід */
+        transition: .25s ease-in-out;
+    }
+
+    .nav-mobile-menu span:first-child {
+        top: 3px;
+    }
+    .nav-mobile-menu span:nth-child(2) {
+        top: 7px;
+    }
+    .nav-mobile-menu span:last-child {
+        bottom: 3px;
+    }
+
+    /* прописуємо стилі коли додається клас .active-menu */
+    .nav-mobile-menu.active-menu span:first-child {
+        top:50%;
+        /* повертаємо першу лінію із трьох (гамбургер-меню) на 45 градусів */
+        transform: rotate(45deg);
+    }
+    .nav-mobile-menu.active-menu span:nth-child(2) {
+        top:50%;
+        /* повертаємо другу лінію із трьох (гамбургер-меню) на -45 градусів */
+        transform: rotate(-45deg);
+    }
+    .nav-mobile-menu.active-menu span:last-child {
+        /* масштабування 3 лінії щоб вона не відображалась  */
+        transform: scale(0);
+    }
+
+    /* приховаємо існуюче меню щоб тільки гамбургер-меню залишилось */
+    .navigation {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 280px;
+        width: 280px;
+        /* змістимо клас .navigation вправо щоби він не відображався на     сторінці */
+        transform: translateX(150%);
+    }
+
+    /* пропишемо стилі для .navigation який має клас .active-menu (при кліку на гамбургер меню цей клас додається) */
+    .navigation.active-menu {
+        opacity: 1;
+        visibility: visible;
+        top:50px;
+        padding: 25px;
+        transform: translateX(0);
+    }
+}
+.navigation.active-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+.nav-mobile-menu {
+    left: 280px;
+    bottom: 20px;
+}
+
+
+/* Модальне вікно */
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: none;
+}
+.modal-form {
+    width: 300px;
+    height: 180px;
+    background-color: rgb(221, 221, 221);
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-close {
+    text-align: end;
+    height: 20px;
+}
+.modal-close-btn {
+    background-color: grey;
+    color: black;
+    width: 36px;
+    height: 100%;
+    border-bottom-left-radius: 2px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 3px;
+}
+.modal-close-btn:hover {
+    background-color: red;
+    color: white;
+}
+.modal-text {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+}
+.first-input-field, .second-input-field {
+    display: block;
+    outline: none;
+}
+.first-input-field {
+    margin: 20px 0px 5px 10px;
+}
+.second-input-field {
+    margin: 5px 0px 30px 10px;
+}
+.modal-call-button, .modal-reset-button {
+    width: 100px;
+    height: 26px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.modal-call-button {
+    margin: 0px 40px 0px 26px;
+}
+.modal-call-button:hover, .modal-reset-button:hover {
+    background-color: #23b7a3;
+    border: none;
+    color: white;
+}
+/* пропишемо 2 класи для того щоб використати їх у JS для виведення і приховання форми */
+.hide {
+    display: none;
+}
+.show {
+    display: block;
 }

@@ -1,0 +1,123 @@
+/* щоб всі елементи правильно визначали свої розміри */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+/* принцип mobile-first. все що написано без медіа запиту буде відноситись до мобільного телефона */
+.container {
+    /* прописуємо ширину 100% а в медіазапитах вказуємо ширину в px */
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    /* container і колонки col мають відступи по 15px; для row пишемо мінусові відступи */
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-xs-12 {
+    /* коеф зжимання  і розжимання по 0; ширина 100%*/
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* tablet (медіа-запит для планшету sm) */
+@media (min-width:768px) {
+    .container {
+       max-width: 720px;
+    }
+    .col-sm-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+    }
+    .col-sm-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+    }
+    .col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-sm-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+    .col-sm-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-sm-7 {
+        /* ширина цієї колонки 7/12*100=58,33333% (5 знаків після коми) */
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
+    .col-sm-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+    .col-sm-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-sm-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+    .col-sm-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+    }
+    .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* laptop (медіа-запит для ноутбука) */
+@media (min-width:992px) {
+    .container {
+       max-width: 960px;
+    }
+
+}
+/*desktop (медіа-запит для компютера)  */
+@media (min-width:1200px) {
+    .container {
+        /* по умові нашої задачі ширина макету 1170px, може бути інша(1140...) */
+       max-width: 1170px;
+    }
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-md-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
+/* only mobile */
+@media (max-width:767px) {
+    /* для мобільних телефонів ховаємо блок з пошуком search */
+    .col-xs-hidden {
+        display: none;
+    }
+
+}

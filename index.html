@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Blog project</title>
+    <!-- першим іде файл css  з обнуленням стилів -->
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <!-- найважливіший файл стилів css має іти останній -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,40 +18,430 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="col-md-3">
-                <div class="logo">
-                    <a href=""><img src="images/logo.png" alt=""></a>
+            <div class="row">
+                <!-- col - колонка, xs -extra small (для телефонів), 12 це розмір колонки. (col-md це на laptop прописується колонка) -->
+                <div class="col-xs-12 col-sm-3">
+                    <div class="logo">
+                        <a href="">
+                            <img src="images/logo.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-7">
+                    <nav class="navigation">
+                        <ul class="menu">
+                            <li> <a href=""> Home </a> </li>
+                            <li> <a href=""> About </a> </li>
+                            <li> <a href=""> Work </a> </li>
+                            <li> <a href=""> Team </a> </li>
+                            <li> <a href=""> Services </a> </li>
+                            <li> <a href=""> Features </a> </li>
+                            <li> <a href=""> Contact </a> </li>
+                        </ul>
+                    </nav>
+                    <!-- гамбургер меню -->
+                    <div class="nav-mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <!-- пошук на мобільному телефоні треба сховати, тому придумаємо йому class="col-xs-hidden" -->
+                <div class="col-xs-hidden col-sm-2">
+                    <div class="row">
+                    <form class="form-search" action="" method="POST">
+                        <input type="text" placeholder="search">
+                        <button class="button-search"></button>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-6">
-                <ul class="menu">
-                    <li> <a href=""> Home </a> </li>
-                    <li> <a href=""> About </a> </li>
-                    <li> <a href=""> Work </a> </li>
-                    <li> <a href=""> Team </a> </li>
-                    <li> <a href=""> Services </a> </li>
-                    <li> <a href=""> Features </a> </li>
-                    <li> <a href=""> Contact </a> </li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <form class="form-search" action="">
-                    <input type="text" placeholder="search">
-                    <button class="button-search"></button>
-                </form>
-            </div>
+        </div>
         </div>
     </header>
-<div class="slaider">
-    <div class="container">
-    <div class="col-md-7">
-        <div class="title"> Welcome to our marketplace</div>
-        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita id  autem iusto reiciendis quisquam nemo, itaque excepturi perferendis voluptatum.</div>
-        <button class="button"> view more</button>
-        <button class="button"> video tour</button>
-    </div>
-    </div>
-</div>
 
+    <main>
+        <div class="slaider">
+            <div class="container">
+                <div class="row">
+                <div class="col-sm-7">
+                    <div class="title"> Welcome to our marketplace</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita id autem iusto
+                        reiciendis quisquam nemo, itaque excepturi perferendis voluptatum.</div>
+                    <button class="slider-button"> view more</button>
+                    <button class="slider-button"> video tour</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+<!-- /* We are Modest */ -->
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-title">
+                            <article class="modest">We are modest.</article>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus sed molestie gravida. Crferm entum  quismagna congue, vel sodales arcu vestibulum. Nunc lobortis dui magna, quis lacusullamcorper at.</p>
+                        <p class="text-about">Phasellus sollicitudin ante eros ornare, <b> sit amet luctus lorem semper.</b> Suspendisse posuere, quamdictum consectetur, augue metus pharetra tellus, eu feugiatloreg egetnisi. Cras ornare bibendum ante, ut bibendum odio convallis eget. vel sodales arcu vestibulum</p>
+                        <div class="modest-social-networks">
+                            <button class="facebook social-networks"></button>
+                            <button class="twitter social-networks"></button>
+                            <button class="google social-networks"></button>
+                            <button class="behance social-networks"></button>
+                            <button class="dribbble social-networks"></button>
+                        </div></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <div class="for-client">
+                            <div class="modest-item">
+                                <div class="square">01</div>
+                                <article class="modest-title">Dedication to the customers
+                                    <p class="modest-text">Integer vel lacus non dui ullamcorper venenatis. Aliquam vitae tristique nisi, vitae ullamcorper risus.</p>
+                                </article>
+                            </div>
+                            <div class="modest-item">
+                                <div class="square">02</div>
+                                <article class="modest-title">working closely with our clients
+                                    <p class="modest-text">Sed blandit nisi urna, sed pellentesque enim consectetur vitae. Suspendisse ut vehicula nibh.</p>
+                                </article>
+                            </div>
+                            <div class="modest-item">
+                                <div class="square">03</div>
+                                <article class="modest-title">increase happiness
+                                    <p class="modest-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend laoreet euismod.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+<!-- Meet the team -->
+        <section class="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-title">
+                            <article class="modest">Meet the team.</article>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="team-members">
+                                <div class="members Gloria-Bromley"></div>
+                                <div class="member-description">
+                                    <p class="member-title">Gloria Bromley</p>
+                                    <p class="member-text">CEO and Founder</p>
+                                </div>
+                                <div class="member-social-network">
+                                    <a href="" class="member-social social-twitter"></a>
+                                    <a href="" class="member-social social-facebook"></a>
+                                    <a href="" class="member-social social-linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="team-members">
+                                <div class="members Paul-Torres"></div>
+                                <div class="member-description">
+                                    <p class="member-title">Paul Torres</p>
+                                    <p class="member-text">Head of Development</p>
+                                </div>
+                                <div class="member-social-network">
+                                    <a href="" class="member-social social-twitter"></a>
+                                    <a href="" class="member-social social-facebook"></a>
+                                    <a href="" class="member-social social-linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="team-members">
+                                <div class="members Judith-Gillette"></div>
+                                <div class="member-description">
+                                    <p class="member-title">Judith Gillette</p>
+                                    <p class="member-text">Graphic Desinger</p>
+                                </div>
+                                <div class="member-social-network">
+                                    <a href="" class="member-social social-twitter"></a>
+                                    <a href="" class="member-social social-facebook"></a>
+                                    <a href="" class="member-social social-linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="team-members">
+                                <div class="members Delores-Reed"></div>
+                                <div class="member-description">
+                                    <p class="member-title">Delores Reed</p>
+                                    <p class="member-text">Client Service Director     </p>
+                                </div>
+                                <div class="member-social-network">
+                                    <a href="" class="member-social social-twitter"></a>
+                                    <a href="" class="member-social social-facebook"></a>
+                                    <a href="" class="member-social social-linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+<!-- Lowely work -->
+        <section class="work">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-title">
+                            <article class="modest lovely-work">Lovely work.</article>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="work-img work-img-1">
+                            <button class="button-add"> </button>
+                            <div class="work-text">partnership guidlines</div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="work-img work-img-2">
+                            <button class="button-add"> </button>
+                            <div class="work-text">partnership guidlines</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="work-img work-img-3">
+                            <button class="button-add"> </button>
+                            <div class="work-text">partnership guidlines</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="work-img work-img-4">
+                            <button class="button-add"> </button>
+                            <div class="work-text">partnership guidlines</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="work-img work-img-5">
+                            <button class="button-add"> </button>
+                            <div class="work-text">partnership guidlines</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="work-img work-img-6">
+                            <button class="button-add"> </button>
+                            <div class="work-text">partnership guidlines</div>
+                        </div>
+                    </div>
+                    <button class="work-button">Show me more</button>
+                </div>
+            </div>
+        </section>
+<!-- What we do -->
+        <section class="what-we-do">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-title">
+                            <article class="modest">What we do.</article>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-1">
+                            <div class="we-do-img we-do-1-img"></div>
+                            <h1 class="we-do-title"> Easy theme Setup </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-2">
+                            <div class="we-do-img we-do-2-img"></div>
+                            <h1 class="we-do-title"> pixel perfect design </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-3">
+                            <div class="we-do-img we-do-3-img"></div>
+                            <h1 class="we-do-title"> responsive display </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-4">
+                            <div class="we-do-img we-do-4-img"></div>
+                            <h1 class="we-do-title"> 24/7 support </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-1">
+                            <div class="we-do-img we-do-1-img"></div>
+                            <h1 class="we-do-title"> Easy theme Setup </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-2">
+                            <div class="we-do-img we-do-2-img"></div>
+                            <h1 class="we-do-title"> pixel perfect design </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-3">
+                            <div class="we-do-img we-do-3-img"></div>
+                            <h1 class="we-do-title"> responsive display </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="we-do-4">
+                            <div class="we-do-img we-do-4-img"></div>
+                            <h1 class="we-do-title"> 24/7 support </h1>
+                            <p class="we-do-text"> Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-title">
+                            <article class="modest lovely-work">Features.</article>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="features-1">
+                            <div class="features-img features-img-1"></div>
+                            <h1 class="features-title"> Product Design: Eames Chairs </h1>
+                            <p class="features-text"> Eames designs are certainly iconic. Everyone of us know at least two or three of their famous chairs. I would even risk saying that most of us dream about having a nice Eames. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="features-2">
+                            <div class="features-img features-img-2"></div>
+                            <h1 class="features-title"> Product Design: Eames Chairs </h1>
+                            <p class="features-text"> Eames designs are certainly iconic. Everyone of us know at least two or three of their famous chairs. I would even risk saying that most of us dream about having a nice Eames. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="features-3">
+                            <div class="features-img features-img-3"></div>
+                            <h1 class="features-title"> Product Design: Eames Chairs </h1>
+                            <p class="features-text"> Eames designs are certainly iconic. Everyone of us know at least two or three of their famous chairs. I would even risk saying that most of us dream about having a nice Eames. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Stay in touch -->
+        <section class="touch">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-title">
+                            <article class="modest">Stay in touch.</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82352.48246516628!2d23.942195667005382!3d49.832778677552014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7c09109a57%3A0x4223c517012378e2!2z0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1624422734475!5m2!1suk!2sua" width="100%" height="346" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="contact-information">
+                            <div class="contact-information-title"> Contact     information</div>
+                            <div class="contact-information-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing   elit. Sed nisi metus, tristique nec dolor non, ornare     sagittisdolor. Nulla vestibulum lacus sed molestie     gravida.</p>
+                                <p>Cras fermentum elit quis magna congue, <b> vel   sodales</b> arcu vestibulum. Nunc lobortis dui magna,     quis dapibuslacus </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form">
+                            <form action="" method="POST">
+                                <div class="form-field">
+                                    <div class="left-text"> Your name
+                                        <input class="first-column" name="name" type="text">
+                                    </div>
+                                    <div class="right-text"> Your email
+                                        <input class="second-column" name="email" type="email">
+                                    </div>
+                                </div>
+                                <div class="form-message"> Your message
+                                    <textarea class="third-column" name="message" type="message" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <button class="form-button">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Footer  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-row">
+                <div class="col-xs-12 col-sm-4">
+                    <span class="footer-text"> © Copyright 2014 by PSD Booster. All Rights Reserved.</span>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <div class="footer-social-networks">
+                        <ul>
+                            <li>
+                                <a class="footer-twitter" href=""></a>
+                            </li>
+                            <li>
+                                <a class="footer-facebook" href=""></a>
+                            </li>
+                            <li>
+                                <a class="footer-skype" href=""></a>
+                            </li>
+                            <li>
+                                <a class="footer-behance" href=""></a>
+                            </li>
+                            <li>
+                                <a class="footer-linkedin" href=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Модальне вікно: -->
+    <div class="modal-window">
+        <form class="modal-form" action="" method="POST">
+            <div class="modal-close">
+                <button class="modal-close-btn">X</button>
+            </div>
+            <div class="modal-text">Please call for more details</div>
+            <input class="first-input-field" type="name" placeholder="Your name">
+            <input class="second-input-field" type="tel" placeholder="Your phone">
+            <button class="modal-call-button">Please call</button>
+            <button class="modal-reset-button">Reset</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
