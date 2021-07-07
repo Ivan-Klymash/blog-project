@@ -19,11 +19,12 @@
     display: flex;
     justify-content: flex-start;
     overflow-x: auto;
+    position: absolute;
 }
 .menu li {
     /* є7 колонок під меню, 100/7=14.28571% */
     width: 14.28571%;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 .menu li:last-child {
     margin-right: 85px;
@@ -43,12 +44,14 @@
     /* принаведенні на блоки меню вони скачуть тому що додаємо рамку і змінюється висота/ширина. щоб не скакали задаємно рамку для menu aле з кольором transparent(колір унаслідується у батьківського елемента) і цю рамку ми не будемо бачити. пізніше при наведенні виводимо рамку з кольором яку будемо бачити але наше меню не скакатиме: */
     border: 2px solid transparent;
     border-radius: 2px;
+    padding: 0 10px;
 }
 .menu a:hover {
     color: #a4aead;
     background-color: inherit;
     border: 2px solid #5a6068;
     border-radius: 2px;
+    padding: 0 10px;
 }
 
 .form-search {
@@ -131,7 +134,7 @@ padding: 33px 0px 45px;
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 40px;
     color: #ffffff;
     text-transform: uppercase;
     border: 2px solid #ffffff;
@@ -142,13 +145,13 @@ padding: 33px 0px 45px;
 }
 .slider-button:hover {
     background-color: #23b7a3;
-    border: none;
+    border: 2px solid transparent;
 }
 
 
 /* We are Modest */
 .about {
-    height: 611px;
+    height: 100%;
     background-color: white;
 }
 
@@ -159,7 +162,7 @@ padding: 33px 0px 45px;
     color: #292f36;
     text-transform: uppercase;
     margin-top: 80px;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
     border-left: 10px solid #e1e6ea;
     padding-left: 14px;
     display: flex;
@@ -182,9 +185,9 @@ b {
 
 .modest-social-networks {
     display: flex;
-    justify-content: space-between;
-    width: 304px;
-    padding-top: 55px;
+    /* justify-content: space-between; */
+    width: 100%;
+    padding-top: 50px;
 }
 .social-networks {
     background-repeat: no-repeat;
@@ -214,7 +217,6 @@ b {
     background-color: #d0d5d9;
     cursor: pointer;
 }
-
 
 .for-client{
     display: flex;
@@ -259,9 +261,13 @@ b {
     text-transform: none;
 }
 
+hr {
+    margin: 0px;
+}
+
 /* Meet the team */
 .team {
-    height: 649px;
+    height: 100%;
     background-color: white;
 }
 .team-members {
@@ -271,7 +277,7 @@ b {
     position: relative;
 }
 .members {
-    width: 263px;
+    width: 100%;
     height: 300px;
     background-repeat: no-repeat;
 }
@@ -339,13 +345,18 @@ b {
     left: 59px;
 }
 
-
-.members:hover {
+.members:hover{
     opacity: 0.4;
 }
 .team-members:hover .member-social {
     display: block;
 }
+.member-social:hover{
+    background-color: #4e5a62;
+}
+/* .members .member-social:hover{
+    opacity: 0.4;
+} */
 .team-members:hover .member-description {
     background-color: #3a454d;
 }
@@ -357,7 +368,7 @@ b {
 /* Lowely work */
 
 .work {
-    height: 899px;
+    height: 100%;
     background-color:#3a454d;
 }
 
@@ -369,7 +380,7 @@ b {
 .work-img {
     display: flex;
     align-items: flex-end;
-    width: 360px;
+    width: 100%;
     height: 265px;
     background-repeat: no-repeat;
     margin-bottom: 30px;
@@ -401,7 +412,7 @@ b {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    width: 360px;
+    width: 100%;
     height: 60px;
     background-color: #292f36;
     line-height: 60px;
@@ -412,7 +423,6 @@ b {
 .work-img:hover .work-text {
     display: block;
 }
-
 
 .button-add {
     background-image: url(images/icon\ \(add\).png);
@@ -460,7 +470,7 @@ b {
 /* What we do */
 
 .what-we-do {
-    height: 896px;
+    height: 100%;
 }
 .we-do-img {
     background-repeat: no-repeat;
@@ -503,14 +513,20 @@ b {
 }
 
 .we-do-1 {
-    margin-bottom: 96px;
+    margin-bottom: 70px;
+}
+.we-do-1, .we-do-2, .we-do-3, .we-do-4 {
+    margin-top: 25px;
 }
 
 /* Features */
 
 .features {
-    height: 732px;
+    height: 100%;
     background-color: #3a454d;
+}
+.features-block {
+    margin-top: 84px;
 }
 .features-img {
     background-repeat: no-repeat;
@@ -535,6 +551,7 @@ b {
 .features-text {
     font-size: 16px;
     font-weight: 400;
+    line-height: 26px;
     color: #dcdfe1;
 }
 
@@ -548,7 +565,11 @@ b {
 /* Stay in touch */
 
 .touch {
-    height: 866px;
+    height: 100%;
+}
+
+.in-toush {
+    margin-top: 64px;
 }
 
 .contact-information-title {
@@ -570,13 +591,12 @@ b {
     padding-bottom: 40px;
 }
 
-
 .form {
-    height: 400px;
-    width: 555px;
+    height: 100%;
+    width: 100%;
     background-color: #fff;
-    margin-top: -129px;
-    position: absolute;
+    /* margin-top: -129px;
+    position: absolute; */
 }
 
 .form-field {
@@ -598,7 +618,7 @@ b {
 
 .first-column, .second-column {
     display: block;
-    width: 220px;
+    width: 100%;
     height: 44px;
     border: none;
     background-color: #eaeef1;
@@ -627,7 +647,7 @@ b {
     outline: none;
     margin-left: -3px;
     display: block;
-    width: 456px;
+    width: 100%;
 }
 
 .form-button {
@@ -652,7 +672,7 @@ b {
 /* Footer */
 .footer {
     background-color: #3a454d;
-    height: 95px;
+    height: 100%;
 }
 
 .footer-row {
@@ -663,12 +683,12 @@ b {
     font-size: 14px;
     font-weight: 400;
     color: #fff;
-    line-height: 95px;
+    line-height: 26px;
 }
 
 .footer-social-networks ul{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .footer-social-networks a {
@@ -677,7 +697,7 @@ b {
     height: 35px;
     background-repeat: no-repeat;
     color: #fff;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 .footer-twitter {
@@ -769,6 +789,7 @@ b {
 .navigation.active-menu ul {
     display: flex;
     flex-direction: column;
+    right: 15px;
 }
 .nav-mobile-menu {
     left: 280px;

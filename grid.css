@@ -96,6 +96,66 @@ body {
        max-width: 960px;
     }
 
+    .about {
+        height: 611px;
+    }
+    .modest-social-networks {
+        max-width: 304px;
+    }
+
+    .team {
+        height: 649px;
+    }
+    .members {
+        max-width: 263px;
+    }
+
+    .work {
+        height: 899px;
+    }
+    .work-img {
+        max-width: 360px;
+    }
+    .work-text {
+        width: 360px;
+    }
+
+    .what-we-do {
+        height: 896px;
+    }
+
+    .features {
+        height: 732px;
+    }
+
+    .touch {
+        height: 866px;
+    }
+    .form {
+        height: 400px;
+        max-width: 555px;
+        margin-top: -129px;
+        position: absolute;
+    }
+    .first-column, .second-column {
+        max-width: 220px;
+    }
+    .form-message>textarea {
+        max-width: 456px;
+    }
+
+    .footer {
+        height: 95px;
+    }
+    .footer-text {
+        line-height: 95px;
+    }
+    .footer-social-networks a {
+        margin-top: 25px;
+    }
+    .footer-social-networks ul{
+        justify-content: space-between;
+    }
 }
 /*desktop (медіа-запит для компютера)  */
 @media (min-width:1200px) {
@@ -111,6 +171,68 @@ body {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
     }
+
+
+    .about {
+        height: 611px;
+    }
+    .modest-social-networks {
+        max-width: 304px;
+    }
+
+    .team {
+        height: 649px;
+    }
+    .members {
+        max-width: 263px;
+    }
+
+    .work {
+        height: 899px;
+    }
+    .work-img {
+        max-width: 360px;
+    }
+    .work-text {
+        width: 360px;
+    }
+
+    .what-we-do {
+        height: 896px;
+    }
+
+    .features {
+        height: 732px;
+    }
+
+    .touch {
+        height: 866px;
+    }
+    .form {
+        height: 400px;
+        max-width: 555px;
+        margin-top: -129px;
+        position: absolute;
+    }
+    .first-column, .second-column {
+        max-width: 220px;
+    }
+    .form-message>textarea {
+        max-width: 456px;
+    }
+
+    .footer {
+        height: 95px;
+    }
+    .footer-text {
+        line-height: 95px;
+    }
+    .footer-social-networks a {
+        margin-top: 25px;
+    }
+    .footer-social-networks ul{
+        justify-content: space-between;
+    }
 }
 
 /* only mobile */
@@ -119,5 +241,140 @@ body {
     .col-xs-hidden {
         display: none;
     }
-
 }
+
+
+
+
+
+/* пофіксити .form-search: width:195px і .form-search input:width: 152px; на планшеті */
+/*пофіксити .button-search width: 15px;  на планшеті*/
+/* пофіксити slider картинка щоби було видно усю на телефоні */
+
+/*
+.about {
+    height: 611px;
+}
+.modest-social-networks {
+width: 304px;
+justify-content: space-between;? передивитись чи треба
+}
+
+
+.team {
+    height: 649px;
+}
+.members {
+    width: 263px;
+}
+
+.work {
+    height: 899px;
+}
+.work-img {
+    width: 360px;
+}
+.work-text {
+    width: 360px;
+}
+
+.what-we-do {
+    height: 896px;
+}
+
+.features {
+    height: 732px;
+}
+
+.touch {
+    height: 866px;
+}
+.form {
+    height: 400px;
+    width: 555px;
+    margin-top: -129px;
+    position: absolute;
+}
+.first-column, .second-column {
+    width: 220px;
+}
+.form-message>textarea {
+    width: 456px;
+}
+
+.footer {
+    height: 95px;
+}
+.footer-text {
+    line-height: 95px;
+}
+.footer-social-networks a {
+    margin-top: 25px;
+} */
+/* .footer-social-networks ul{
+    justify-content: space-between;
+} */
+
+
+
+
+/* .about {
+    height: 611px;
+}
+.modest-social-networks {
+width: 304px;
+}
+
+.team {
+    height: 649px;
+}
+.members {
+    width: 263px;
+}
+
+.work {
+    height: 899px;
+}
+.work-img {
+    width: 360px;
+}
+.work-text {
+    width: 360px;
+}
+
+.what-we-do {
+    height: 896px;
+}
+
+.features {
+    height: 732px;
+}
+
+.touch {
+    height: 866px;
+}
+.form {
+    height: 400px;
+    width: 555px;
+    margin-top: -129px;
+    position: absolute;
+}
+.first-column, .second-column {
+    width: 220px;
+}
+.form-message>textarea {
+    width: 456px;
+}
+
+.footer {
+    height: 95px;
+}
+.footer-text {
+    line-height: 95px;
+}
+.footer-social-networks a {
+    margin-top: 25px;
+}
+.footer-social-networks ul{
+    justify-content: space-between;
+} */
