@@ -21,14 +21,14 @@
     overflow-x: auto;
     position: absolute;
 }
-.menu li {
+/* .menu li { */
     /* є7 колонок під меню, 100/7=14.28571% */
-    width: 14.28571%;
-    /* margin-right: 15px; */
-}
-.menu li:last-child {
+    /* width: 14.28571%;
+    margin-right: 15px;
+} */
+/* .menu li:last-child {
     margin-right: 85px;
-}
+} */
 .menu a {
     /* щоб розмір <a> був як <li> задаємо dicplay:block  і задаємо висоту height */
     display: block;

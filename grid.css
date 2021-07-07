@@ -96,11 +96,21 @@ body {
        max-width: 960px;
     }
 
+    .menu li {
+    /* є7 колонок під меню, 100/7=14.28571% */
+    width: 14.28571%;
+    margin-right: 15px;
+    }
+
+    .menu li:last-child {
+        margin-right: 85px;
+    }
     .about {
         height: 611px;
     }
     .modest-social-networks {
         max-width: 304px;
+        justify-content: space-between;
     }
 
     .team {
@@ -173,11 +183,21 @@ body {
     }
 
 
+    .menu li {
+    /* є7 колонок під меню, 100/7=14.28571% */
+    width: 14.28571%;
+    margin-right: 15px;
+    }
+
+    .menu li:last-child {
+        margin-right: 85px;
+    }
     .about {
         height: 611px;
     }
     .modest-social-networks {
         max-width: 304px;
+        justify-content: space-between;
     }
 
     .team {
@@ -234,6 +254,19 @@ body {
         justify-content: space-between;
     }
 }
+
+
+/* медіазапит для телефону найменшого розміру */
+@media (max-width: 375px) {
+.nav-mobile-menu {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 280px;
+    }
+}
+
+
 
 /* only mobile */
 @media (max-width:767px) {
