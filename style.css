@@ -21,14 +21,7 @@
     overflow-x: auto;
     position: absolute;
 }
-/* .menu li { */
-    /* є7 колонок під меню, 100/7=14.28571% */
-    /* width: 14.28571%;
-    margin-right: 15px;
-} */
-/* .menu li:last-child {
-    margin-right: 85px;
-} */
+
 .menu a {
     /* щоб розмір <a> був як <li> задаємо dicplay:block  і задаємо висоту height */
     display: block;
@@ -72,7 +65,7 @@
     text-transform: uppercase;
     color: #a4aead;
     /* щоб текст який користувач вводить не накладався на кнопку задаємо ширину вводу тексту до початку кнопки */
-    width: 152px;
+    width: 80px;
 }
  /* забираємо внутрішню рамку у input при фокусуванні(наведенні) через псевдоклас :focus */
 .form-search input:focus {
@@ -101,7 +94,6 @@ input:placeholder-shown {
     right: 21px;
 }
 
-
 .slaider {
     height: 660px;
     background-image: url(images/img\ \(2\).png);
@@ -113,7 +105,7 @@ input:placeholder-shown {
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 36px;
     font-weight: 700;
-    /* line-height: 42px; */
+    line-height: 42px;
     color: #ffffff;
     text-transform: uppercase;
     padding-top: 225px;
@@ -185,9 +177,9 @@ b {
 
 .modest-social-networks {
     display: flex;
-    /* justify-content: space-between; */
-    width: 100%;
+    justify-content: space-between;
     padding-top: 50px;
+    padding-bottom: 20px;
 }
 .social-networks {
     background-repeat: no-repeat;
@@ -272,14 +264,16 @@ hr {
 }
 .team-members {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     position: relative;
+    padding-bottom: 30px;
 }
 .members {
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
+    background-position-x: center;
 }
 .Gloria-Bromley {
     background-image: url(images/img\ \(Gloria-Bromley\).png);
@@ -342,7 +336,6 @@ hr {
     display: flex;
     position: absolute;
     top: 125px;
-    left: 59px;
 }
 
 .members:hover{
@@ -354,9 +347,7 @@ hr {
 .member-social:hover{
     background-color: #4e5a62;
 }
-/* .members .member-social:hover{
-    opacity: 0.4;
-} */
+
 .team-members:hover .member-description {
     background-color: #3a454d;
 }
@@ -380,12 +371,14 @@ hr {
 .work-img {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     width: 100%;
     height: 265px;
     background-repeat: no-repeat;
     margin-bottom: 30px;
     cursor: pointer;
     position: relative;
+    background-position-x: center;
 }
 .work-img-1 {
     background-image: url(images/img\ \(work-img-1\).png);
@@ -412,12 +405,12 @@ hr {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    width: 100%;
     height: 60px;
     background-color: #292f36;
     line-height: 60px;
     padding-left: 21px;
     display: none;
+    width: 360px;
 }
 
 .work-img:hover .work-text {
@@ -433,7 +426,6 @@ hr {
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 175px;
     bottom: 152px;
     cursor: pointer;
     display: none;
@@ -459,6 +451,7 @@ hr {
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
 }
 .work-button:hover {
     background-color: #23b7a3;
@@ -498,7 +491,7 @@ hr {
     font-weight: 400;
     color: #8d8f92;
     text-align: center;
-    /* padding-left: 9px; */
+    padding-bottom: 20px;
 }
 
 .we-do-2-img {
@@ -513,11 +506,9 @@ hr {
 }
 
 .we-do-1 {
-    margin-bottom: 70px;
-}
-.we-do-1, .we-do-2, .we-do-3, .we-do-4 {
     margin-top: 25px;
 }
+
 
 /* Features */
 
@@ -562,6 +553,13 @@ hr {
     background-image: url(images/img\ \(13\).png);
 }
 
+.features-1, .features-2 {
+    margin-bottom: 30px;
+}
+.features-3 {
+    margin-bottom: 124px;
+}
+
 /* Stay in touch */
 
 .touch {
@@ -592,11 +590,8 @@ hr {
 }
 
 .form {
-    height: 100%;
-    width: 100%;
     background-color: #fff;
-    /* margin-top: -129px;
-    position: absolute; */
+    padding-bottom: 113px;
 }
 
 .form-field {
@@ -607,13 +602,13 @@ hr {
     padding-left: 36px;
 }
 
-
 .left-text, .right-text {
     padding-top: 30px;
     font-family: 'Quattrocento Sans',sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #8d8f92;
+    width: 100%;
 }
 
 .first-column, .second-column {
@@ -635,7 +630,7 @@ hr {
     font-size: 14px;
     font-weight: 700;
     color: #8d8f92;
-    padding-left: 36px;
+    padding-left: 30px;
     padding-top: 30px;
 }
 
@@ -645,8 +640,6 @@ hr {
     border: none;
     background-color: #eaeef1;
     outline: none;
-    margin-left: -3px;
-    display: block;
     width: 100%;
 }
 
@@ -683,7 +676,7 @@ hr {
     font-size: 14px;
     font-weight: 400;
     color: #fff;
-    line-height: 26px;
+    /* line-height: 95px; */
 }
 
 .footer-social-networks ul{
@@ -697,7 +690,7 @@ hr {
     height: 35px;
     background-repeat: no-repeat;
     color: #fff;
-    /* margin-top: 25px; */
+    background-position: center;
 }
 
 .footer-twitter {
@@ -714,6 +707,11 @@ hr {
 }
 .footer-linkedin {
     background-image: url(images/icon\ \(linkedin\).png);
+}
+
+.footer-social-networks a:hover {
+    background-color: #d0d5d9;
+    cursor: pointer;
 }
 
 
@@ -873,4 +871,290 @@ hr {
 }
 .show {
     display: block;
+}
+
+
+/* медіазапит для телефону найменшого розміру */
+@media (max-width: 375px) {
+    .nav-mobile-menu {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        left: 280px;
+    }
+    .modest-social-networks {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% + 3px);
+    }
+    .social-networks {
+        max-width: 58px;
+    }
+}
+
+
+
+/* (медіа-запити для різних розмірів екрану телефона) */
+@media (max-width:424px) and (min-width:321px) {
+    .nav-mobile-menu {
+    left: 335px;
+    }
+}
+@media (max-width:767px) and (min-width:425px) {
+    .nav-mobile-menu {
+    left: 380px;
+    }
+}
+
+
+
+/* tablet (медіа-запит для планшету sm) */
+@media (min-width:768px) {
+    .menu {
+        position: static;
+        overflow-x: auto;
+    }
+
+    .form-search input {
+        width: 80px;
+    }
+
+    .modest-social-networks {
+        max-width: 304px;
+    }
+
+    .members {
+        max-width: 263px;
+    }
+
+    .work-img {
+        max-width: 360px;
+    }
+    .work-text {
+        width: 360px;
+    }
+
+    .we-do-1, .we-do-2, .we-do-3, .we-do-4 {
+        margin-top: 25px;
+    }
+
+    .touch {
+        height: 866px;
+    }
+    .form {
+        height: 400px;
+        max-width: 555px;
+        margin-top: -129px;
+        position: absolute;
+    }
+    .first-column, .second-column {
+        max-width: 170px;
+    }
+    .form-message>textarea {
+        max-width: 334px;
+    }
+
+    .footer {
+        height: 95px;
+        padding: 25px 0px;
+    }
+    .footer-text {
+        line-height: 22px;
+    }
+    .footer-social-networks a {
+        background-position: center;
+    }
+    .footer-social-networks a:hover {
+        background-color: #d0d5d9;
+        cursor: pointer;
+    }
+    .footer-social-networks ul{
+        justify-content: space-between;
+    }
+}
+
+
+
+
+/* laptop (медіа-запит для ноутбука) */
+@media (min-width:992px) {
+    .menu {
+        overflow-x: auto;
+    }
+    .menu li {
+    /* є7 колонок під меню, 100/7=14.28571% */
+    width: 14.28571%;
+    margin-right: 15px;
+    }
+
+    .menu li:last-child {
+        margin-right: 85px;
+    }
+
+
+    .form-search input {
+    width: 115px;
+    }
+
+    .about {
+        height: 611px;
+    }
+    .modest-social-networks {
+        max-width: 304px;
+    }
+
+    .members {
+        max-width: 263px;
+    }
+
+    .work-img {
+        max-width: 360px;
+    }
+    .work-text {
+        width: 360px;
+    }
+
+    .we-do-1 {
+        margin-bottom: 70px;
+    }
+    .we-do-1, .we-do-2, .we-do-3, .we-do-4 {
+        margin-top: 25px;
+    }
+
+    .touch {
+        height: 866px;
+    }
+    .form {
+        height: 400px;
+        width: 497px;
+        margin-top: -129px;
+        position: absolute;
+    }
+    .first-column, .second-column {
+        width: 210px;
+        max-width: 210px;
+    }
+    .form-message>textarea {
+        width: 440px;
+        max-width: 440px;
+    }
+
+    .footer {
+        height: 95px;
+    }
+    .footer-text {
+        line-height: 95px;
+    }
+
+    .footer-social-networks ul{
+        justify-content: space-between;
+    }
+}
+
+
+
+
+/*desktop (медіа-запит для компютера md)  */
+@media (min-width:1200px) {
+    .menu {
+        position: absolute;
+    }
+    .menu li {
+    /* є7 колонок під меню, 100/7=14.28571% */
+    width: 14.28571%;
+    margin-right: 15px;
+    }
+
+    .menu li:last-child {
+        margin-right: 85px;
+    }
+
+    .form-search input {
+        width: 152px;
+    }
+
+    .about {
+        height: 611px;
+    }
+    .modest-social-networks {
+        width: 304px;
+        justify-content: space-between;
+    }
+
+    .team {
+        height: 649px;
+    }
+    .members {
+        width: 263px;
+    }
+
+    .work {
+        height: 899px;
+    }
+    .work-img {
+        width: 360px;
+    }
+    .work-text {
+        width: 360px;
+    }
+
+    .what-we-do {
+        height: 896px;
+    }
+    .we-do-1 {
+        margin-bottom: 70px;
+    }
+    .we-do-1, .we-do-2, .we-do-3, .we-do-4 {
+        margin-top: 25px;
+    }
+
+    .features {
+        height: 732px;
+    }
+
+    .touch {
+        height: 866px;
+    }
+    .form {
+        height: 400px;
+        width: 555px;
+        margin-top: -129px;
+        position: absolute;
+    }
+    .first-column, .second-column {
+        width: 240px;
+        max-width: 240px;
+    }
+    .form-message>textarea {
+        width: 495px;
+        max-width: 495px;
+    }
+    .left-text, .right-text {
+        width: auto;
+    }
+    .left-text {
+        padding-left: 30px;
+    }
+    .footer {
+        height: 95px;
+        padding: 25px 0px;
+    }
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-text {
+        line-height: 47px;
+    }
+    .footer-social-networks a {
+        background-position: center;
+    }
+    .footer-social-networks a:hover {
+        background-color: #d0d5d9;
+        cursor: pointer;
+    }
+    .footer-social-networks ul{
+        justify-content: space-between;
+    }
 }

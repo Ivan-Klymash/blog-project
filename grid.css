@@ -34,6 +34,7 @@ body {
     max-width: 100%;
 }
 
+
 /* tablet (медіа-запит для планшету sm) */
 @media (min-width:768px) {
     .container {
@@ -90,88 +91,23 @@ body {
     }
 }
 
-/* laptop (медіа-запит для ноутбука) */
+/* laptop (медіа-запит для ноутбука md) */
 @media (min-width:992px) {
     .container {
        max-width: 960px;
     }
-
-    .menu li {
-    /* є7 колонок під меню, 100/7=14.28571% */
-    width: 14.28571%;
-    margin-right: 15px;
-    }
-
-    .menu li:last-child {
-        margin-right: 85px;
-    }
-    .about {
-        height: 611px;
-    }
-    .modest-social-networks {
-        max-width: 304px;
-        justify-content: space-between;
-    }
-
-    .team {
-        height: 649px;
-    }
-    .members {
-        max-width: 263px;
-    }
-
-    .work {
-        height: 899px;
-    }
-    .work-img {
-        max-width: 360px;
-    }
-    .work-text {
-        width: 360px;
-    }
-
-    .what-we-do {
-        height: 896px;
-    }
-
-    .features {
-        height: 732px;
-    }
-
-    .touch {
-        height: 866px;
-    }
-    .form {
-        height: 400px;
-        max-width: 555px;
-        margin-top: -129px;
-        position: absolute;
-    }
-    .first-column, .second-column {
-        max-width: 220px;
-    }
-    .form-message>textarea {
-        max-width: 456px;
-    }
-
-    .footer {
-        height: 95px;
-    }
-    .footer-text {
-        line-height: 95px;
-    }
-    .footer-social-networks a {
-        margin-top: 25px;
-    }
-    .footer-social-networks ul{
-        justify-content: space-between;
-    }
 }
-/*desktop (медіа-запит для компютера)  */
+/*desktop (медіа-запит для компютера md)  */
 @media (min-width:1200px) {
     .container {
         /* по умові нашої задачі ширина макету 1170px, може бути інша(1140...) */
        max-width: 1170px;
+    }
+
+    /* 2/12*100=16.66667 */
+    .col-md-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
     }
     .col-md-3 {
         flex: 0 0 25%;
@@ -181,91 +117,11 @@ body {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
     }
-
-
-    .menu li {
-    /* є7 колонок під меню, 100/7=14.28571% */
-    width: 14.28571%;
-    margin-right: 15px;
-    }
-
-    .menu li:last-child {
-        margin-right: 85px;
-    }
-    .about {
-        height: 611px;
-    }
-    .modest-social-networks {
-        max-width: 304px;
-        justify-content: space-between;
-    }
-
-    .team {
-        height: 649px;
-    }
-    .members {
-        max-width: 263px;
-    }
-
-    .work {
-        height: 899px;
-    }
-    .work-img {
-        max-width: 360px;
-    }
-    .work-text {
-        width: 360px;
-    }
-
-    .what-we-do {
-        height: 896px;
-    }
-
-    .features {
-        height: 732px;
-    }
-
-    .touch {
-        height: 866px;
-    }
-    .form {
-        height: 400px;
-        max-width: 555px;
-        margin-top: -129px;
-        position: absolute;
-    }
-    .first-column, .second-column {
-        max-width: 220px;
-    }
-    .form-message>textarea {
-        max-width: 456px;
-    }
-
-    .footer {
-        height: 95px;
-    }
-    .footer-text {
-        line-height: 95px;
-    }
-    .footer-social-networks a {
-        margin-top: 25px;
-    }
-    .footer-social-networks ul{
-        justify-content: space-between;
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
-
-
-/* медіазапит для телефону найменшого розміру */
-@media (max-width: 375px) {
-.nav-mobile-menu {
-    width: 15px;
-    height: 15px;
-    position: relative;
-    left: 280px;
-    }
-}
-
 
 
 /* only mobile */
@@ -275,139 +131,3 @@ body {
         display: none;
     }
 }
-
-
-
-
-
-/* пофіксити .form-search: width:195px і .form-search input:width: 152px; на планшеті */
-/*пофіксити .button-search width: 15px;  на планшеті*/
-/* пофіксити slider картинка щоби було видно усю на телефоні */
-
-/*
-.about {
-    height: 611px;
-}
-.modest-social-networks {
-width: 304px;
-justify-content: space-between;? передивитись чи треба
-}
-
-
-.team {
-    height: 649px;
-}
-.members {
-    width: 263px;
-}
-
-.work {
-    height: 899px;
-}
-.work-img {
-    width: 360px;
-}
-.work-text {
-    width: 360px;
-}
-
-.what-we-do {
-    height: 896px;
-}
-
-.features {
-    height: 732px;
-}
-
-.touch {
-    height: 866px;
-}
-.form {
-    height: 400px;
-    width: 555px;
-    margin-top: -129px;
-    position: absolute;
-}
-.first-column, .second-column {
-    width: 220px;
-}
-.form-message>textarea {
-    width: 456px;
-}
-
-.footer {
-    height: 95px;
-}
-.footer-text {
-    line-height: 95px;
-}
-.footer-social-networks a {
-    margin-top: 25px;
-} */
-/* .footer-social-networks ul{
-    justify-content: space-between;
-} */
-
-
-
-
-/* .about {
-    height: 611px;
-}
-.modest-social-networks {
-width: 304px;
-}
-
-.team {
-    height: 649px;
-}
-.members {
-    width: 263px;
-}
-
-.work {
-    height: 899px;
-}
-.work-img {
-    width: 360px;
-}
-.work-text {
-    width: 360px;
-}
-
-.what-we-do {
-    height: 896px;
-}
-
-.features {
-    height: 732px;
-}
-
-.touch {
-    height: 866px;
-}
-.form {
-    height: 400px;
-    width: 555px;
-    margin-top: -129px;
-    position: absolute;
-}
-.first-column, .second-column {
-    width: 220px;
-}
-.form-message>textarea {
-    width: 456px;
-}
-
-.footer {
-    height: 95px;
-}
-.footer-text {
-    line-height: 95px;
-}
-.footer-social-networks a {
-    margin-top: 25px;
-}
-.footer-social-networks ul{
-    justify-content: space-between;
-} */
