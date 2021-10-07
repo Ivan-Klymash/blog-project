@@ -788,6 +788,7 @@ hr {
     display: flex;
     flex-direction: column;
     right: 15px;
+    background-color: aquamarine;
 }
 .nav-mobile-menu {
     left: 280px;
